@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free Online Image Compression and Background Removal Tool. Optimize your images for web and mobile with ease.">
+  <meta name="keywords" content="image compressor, background remover, image optimization, free image tools">
+  <meta name="author" content="Your Name">
+  <title>Image Tools - Compressor & Background Remover</title>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_ADSENSE_ID" crossorigin="anonymous"></script>
+  <style>
+    /* New UI Styling with White Background */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0;
+      color: #4a90e2;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin: 10px 0 0;
+      color: #666;
+    }
+
+    .nav-links {
+      margin-top: 20px;
+    }
+
+    .nav-links a {
+      margin: 0 10px;
+      color: #4a90e2;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      background: #f9f9f9;
+      border-radius: 15px;
+      padding: 30px;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    section h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #333;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #fff;
+      color: #333;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus, select:focus {
+      border-color: #4a90e2;
+    }
+
+    button {
+      background: #4a90e2;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #357abd;
+    }
+
+    /* Compression Level Options Styling */
+    #compressionLevel {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: transparent;
+      border: 2px solid #ddd;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    #compressionLevel option {
+      color: #000;
+      background: #fff;
+    }
+
+    #compressionLevel option[value="0.1"] {
+      background: #4caf50; /* Green for Low */
+      color: #fff;
+    }
+
+    #compressionLevel option[value="0.5"] {
+      background: #ffeb3b; /* Yellow for Medium */
+      color: #000;
+    }
+
+    #compressionLevel option[value="0.9"] {
+      background: #f44336; /* Red for High */
+      color: #fff;
+    }
+
+    .ad-unit {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    #compressedOutput, #bgRemovedOutput {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    #compressedOutput img, #bgRemovedOutput img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .download-btn {
+      display: none;
+      margin-top: 20px;
+      background: #4caf50;
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background: #45a049;
+    }
+
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    footer a {
+      color: #4a90e2;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Image Tools</h1>
+    <p>Compress and Remove Backgrounds from Images Instantly</p>
+    <div class="nav-links">
+      <a href="#compressor">Compress Image</a>
+      <a href="#bgRemover">Background Remover</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Ad Unit 1 -->
+    <div class="ad-unit">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="YOUR_ADSENSE_ID"
+           data-ad-slot="AD_UNIT_ID_1"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Image Compression Tool -->
+    <section id="compressor">
+  <h2>Image Compressor</h2>
+  <p>Need help? <a href="/img.bg.html" target="_blank">Learn how to compress images</a>.</p>
+  <input type="file" id="compressInput" accept="image/*">
+  <label for="compressionLevel">Compression Level:</label>
+  <select id="compressionLevel">
+    <option value="0.1">Low</option>
+    <option value="0.5" selected>Medium</option>
+    <option value="0.9">High</option>
+  </select>
+  <button id="compressBtn">Compress Image</button>
+  <div id="compressedOutput"></div>
+  <button id="downloadCompressed" class="download-btn">Download Compressed Image</button>
+</section>
+
+    <!-- Background Remover Tool -->
+    <section id="bgRemover">
+  <h2>Background Remover</h2>
+  <input type="file" id="bgInput" accept="image/*">
+  <button id="removeBgBtn">Remove Background</button>
+  <div id="bgRemovedOutput"></div>
+  <a href="img.bg.html" download id="downloadBgRemoved" class="download-btn">
+    Download Background Removed Image
+  </a>
+</section>
+
+
+    <!-- Ad Unit 2 -->
+    <div class="ad-unit">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="YOUR_ADSENSE_ID"
+           data-ad-slot="AD_UNIT_ID_2"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Image Tools. All rights reserved. | <a href="#">Privacy Policy</a></p>
+  </footer>
+
+  <script>
+    // JavaScript Functionality
+    document.getElementById('compressBtn').addEventListener('click', () => {
+      const file = document.getElementById('compressInput').files[0];
+      const compressionLevel = parseFloat(document.getElementById('compressionLevel').value);
+
+      if (file) {
+        compressImage(file, compressionLevel);
+      } else {
+        alert('Please select an image to compress.');
+      }
+    });
+
+    document.getElementById('removeBgBtn').addEventListener('click', () => {
+      const file = document.getElementById('bgInput').files[0];
+
+      if (file) {
+        removeBackground(file);
+      } else {
+        alert('Please select an image to remove the background.');
+      }
+    });
+
+    function compressImage(file, quality) {
+      const reader = new FileReader();
+      reader.onload = function (event) {
+        const img = new Image();
+        img.src = event.target.result;
+
+        img.onload = function () {
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+          canvas.width = img.width;
+          canvas.height = img.height;
+          ctx.drawImage(img, 0, 0);
+
+          canvas.toBlob(
+            (blob) => {
+              const url = URL.createObjectURL(blob);
+              const output = document.getElementById('compressedOutput');
+              output.innerHTML = `<img src="${url}" alt="Compressed Image" style="max-width: 100%;">`;
+
+              // Show download button
+              const downloadBtn = document.getElementById('downloadCompressed');
+              downloadBtn.style.display = 'block';
+              downloadBtn.onclick = () => {
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'compressed-image.jpg';
+                a.click();
+              };
+            },
+            'image/jpeg',
+            quality
+          );
+        };
+      };
+      reader.readAsDataURL(file);
+    }
+
+    async function removeBackground(file) {
+      const formData = new FormData();
+      formData.append('image_file', file);
+
+      const response = await fetch('https://api.remove.bg/v1.0/removebg', {
+        method: 'POST',
+        headers: {
+          'X-Api-Key': 'pieCRcTk8ZpBS7uQvY81kATs', // Replace with your API key
+        },
+        body: formData,
+      });
+
+      if (response.ok) {
+        const blob = await response.blob();
+        const url = URL.createObjectURL(blob);
+        const output = document.getElementById('bgRemovedOutput');
+        output.innerHTML = `<img src="${url}" alt="Background Removed Image" style="max-width: 100%;">`;
+
+        // Show download button
+        const downloadBtn = document.getElementById('downloadBgRemoved');
+        downloadBtn.style.display = 'block';
+        downloadBtn.onclick = () => {
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'background-removed-image.png';
+          a.click();
+        };
+      } else {
+        alert('Failed to remove background. Please try again.');
+      }
+    }
+  </script>
+</body>
+</html>
